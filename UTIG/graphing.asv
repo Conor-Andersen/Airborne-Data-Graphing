@@ -8,18 +8,20 @@ run("data_and_var.m")
 % edit variable names (laserfig1,magfig1,gpsfig1...) as needed.
 laserfig1 = graphlaser(xlas,ylas,bf1,time_bf1,bf2,time_bf2);
 set(gcf,'position',[400,100,1000,1000]);
-% change file name (laserfig1) as desired .
-print('/Users/conorandersen/Desktop/UTIG_Project/UTIG/Figures/laserfig1','-dpng');
+% change file name as desired.
+%save('/Users/conorandersen/Desktop/UTIG_Project/UTIG/Figures/laserfig1.png');
+%savefig '/Users/conorandersen/Desktop/UTIG_Project/UTIG/Figures/laserfig1';
+inwrit(laserfig1,'')
 
 % call to graphmag function.
 magfig1 = graphmag(xmag,ymag);
 set(gcf,'position',[400,100,1000,1000]);
-print('/Users/conorandersen/Desktop/UTIG_Project/UTIG/Figures/magfig1','-dpng');
+%save('/Figures/magfig1.png');
 
 %call to graphgps function
 gpsfig1 = graphgps(xgps,ygps,surf,xlas);
 set(gcf,'position',[400,100,1000,1000]);
-print('/Users/conorandersen/Desktop/UTIG_Project/UTIG/Figures/gpsfig1','-dpng');
+%save('/Figures/gpsfig1.png');
 
 
 

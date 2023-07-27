@@ -8,6 +8,7 @@ bf1path = strcat(datapath,'/BF1_UBHa/vmaxpos_tim');
 bf1path2 = strcat(datapath,'/BF1_UBHa/syn_itim');
 bf2path = strcat(datapath,'/BF2_UBHa/vmaxpos_tim');
 bf2path2 = strcat(datapath,'/BF2_UBHa/syn_itim');
+
 %variables for laser
 load(laspath1);
 syn_itim_las = load(laspath2);
