@@ -16,8 +16,8 @@ syn_itim_las = load(laspath2);
 load(laspath3);
 load(laspath4);
 load(laspath5);
-bf1 = load(bf1path);
-bf2 = load(bf2path);
+bf1_vmaxpos_tim = load(bf1path);
+bf2_vmaxpos_tim = load(bf2path);
 syn_itim_bf1 = load(bf1path2);
 syn_itim_bf2 = load(bf2path2);
 
@@ -27,6 +27,8 @@ xlas = (syn_itim_las/10000)/60;
 ylas = [las_rng,las_rng_mean,deviation,deviation_mean];
 time_bf1 = (syn_itim_bf1/10000)/60;
 time_bf2 = (syn_itim_bf2/10000)/60;
+bf1 = (bf1_vmaxpos_tim).*(1*10^6);
+bf2 = (bf2_vmaxpos_tim).*(1*10^6);
     myfig=figure;
     
  hold on
