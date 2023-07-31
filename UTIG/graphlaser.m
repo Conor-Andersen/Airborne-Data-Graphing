@@ -61,8 +61,8 @@ time_bf2 = (syn_itim_bf2/10000)/60;
        ax = gca;
        set(ax,'YDir','reverse');
        xlabel('Time (minutes)')
-       ylabel('')
-       title('')
+       ylabel('Travel Time (seconds)')
+       title('Two Way Travel Time')
        hold off
 
  hold off
