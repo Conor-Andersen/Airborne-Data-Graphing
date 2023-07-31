@@ -63,7 +63,7 @@ bf2 = (bf2_vmaxpos_tim).*(1*10^6);
        ax = gca;
        set(ax,'YDir','reverse');
        xlabel('Time (minutes)')
-       ylabel('Travel Time (seconds)')
+       ylabel('Travel Time (micro seconds)')
        title('Two Way Travel Time')
        hold off
 
