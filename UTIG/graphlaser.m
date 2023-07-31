@@ -1,5 +1,32 @@
-function myfig = graphlaser(xlas,ylas,bf1,time_bf1,bf2,time_bf2)
+function myfig = graphlaser(datapath)
+% Paths for laser data
+laspath1 = strcat(datapath,'/LAS_UBHa/las_rng');
+laspath2 = strcat(datapath,'/LAS_UBHa/syn_itim');
+laspath3 = strcat(datapath,'/LAS_UBHa/las_rng_mean');
+laspath4 = strcat(datapath,'/LAS_UBHa/deviation');
+laspath5 = strcat(datapath,'/LAS_UBHa/deviation_mean');
+bf1path = strcat(datapath,'/BF1_UBHa/vmaxpos_tim');
+bf1path2 = strcat(datapath,'/BF1_UBHa/syn_itim');
+bf2path = strcat(datapath,'/BF2_UBHa/vmaxpos_tim');
+bf2path2 = strcat(datapath,'/BF2_UBHa/syn_itim');
 
+%variables for laser
+load(laspath1);
+syn_itim_las = load(laspath2);
+load(laspath3);
+load(laspath4);
+load(laspath5);
+bf1 = load(bf1path);
+bf2 = load(bf2path);
+syn_itim_bf1 = load(bf1path2);
+syn_itim_bf2 = load(bf2path2);
+
+% x and y variables must contain the same number of rows. 
+% This can be found by using the length() command in the command window.
+xlas = (syn_itim_las/10000)/60;
+ylas = [las_rng,las_rng_mean,deviation,deviation_mean];
+time_bf1 = (syn_itim_bf1/10000)/60;
+time_bf2 = (syn_itim_bf2/10000)/60;
     myfig=figure;
     
  hold on
