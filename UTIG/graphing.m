@@ -16,11 +16,12 @@ magfig1 = graphmag(datapath);
 set(gcf,'position',[400,100,1000,1000]);
 %print('/Users/conorandersen/Desktop/UTIG_Project/UTIG/Figures/magfig1','-dpng');
 
-%call to graphgps function
+%call to graphgps function.
 gpsfig1 = graphgps(datapath);
 set(gcf,'position',[400,100,1000,1000]);
 %print('/Users/conorandersen/Desktop/UTIG_Project/UTIG/Figures/gpsfig1','-dpng');
 
+%call to radar graphing function.
 radarfig1= graphradar(datapath);
 set(gcf,'position',[400,100,1000,1000]);
 %print('/Users/conorandersen/Desktop/UTIG_Project/UTIG/Figures/radarfig1','-dpng');
