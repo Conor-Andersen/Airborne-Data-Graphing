@@ -25,7 +25,7 @@ int_gps_minus_lr = (int_gps)-(las_rng);
 hor_vel = (EW_vel)+(NS_vel);
 
 xgps = (syn_itim_gps/10000)/60;
-ygps = [hor_vel,vert_cor;];
+ygps = [hor_vel,vert_cor];
 surf = int_gps_minus_lr;
 
 gpsfig = figure;
