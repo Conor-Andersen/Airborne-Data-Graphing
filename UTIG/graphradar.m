@@ -66,10 +66,11 @@ radarfig = figure
        plot(xgps,ygps)
        plot(time_bf1,bf1_radar_distance)
        plot(time_bf2,bf2_radar_distance)
+       plot(xlas,ylas)
        xlabel('Time (minutes)')
        ylabel('Distance (meters)')
        title('GPS elevation vs radar distance')
-       legend('GPS','BF1','BF2')
+       legend('GPS','BF1','BF2','laser range')
        hold off
 
 end
